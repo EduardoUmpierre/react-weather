@@ -1,14 +1,18 @@
 .header {
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
     left: 0;
-    padding: 2rem;
+    min-width: 300px;
     position: absolute;
     text-align: center;
     top: 0;
     width: 100%;
 }
-    .header > h2 {
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 1;
-        margin: 0;
-    }
+.header > h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+}
