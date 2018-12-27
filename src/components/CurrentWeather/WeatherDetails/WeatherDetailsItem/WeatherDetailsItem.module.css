@@ -1,0 +1,32 @@
+.weatherDetailsItem {
+    line-height: 1;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    width: 50%;
+}
+
+.weatherDetailsItemTitle {
+    font-size: 0.5rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+    .weatherDetailsItem:nth-child(even) {
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .weatherDetailsItem {
+        margin-top: 0;
+        padding: 0 2rem;
+        width: auto;
+    }
+
+    .weatherDetailsItem + .weatherDetailsItem {
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
