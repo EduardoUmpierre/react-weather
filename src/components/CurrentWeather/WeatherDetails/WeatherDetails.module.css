@@ -1,0 +1,13 @@
+.weatherDetails {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 769px) {
+    .weatherDetails {
+        margin-top: 4rem;
+    }
+}
