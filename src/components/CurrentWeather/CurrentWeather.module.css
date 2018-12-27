@@ -1,10 +1,12 @@
 .currentWeather {
+    background: url('../../assets/images/cloudy.png') center bottom no-repeat;
+    background-size: cover;
     align-content: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
-    max-height: 100vh;
+    padding: 3rem 0;
     text-align: center;
     width: 100%;
 }
@@ -13,9 +15,9 @@
     font-size: 4rem;
     line-height: 1;
 }
-    .temperature > span {
-        font-size: 0.8rem;
-    }
+.temperature > span {
+    font-size: 0.8rem;
+}
 
 .description {
     font-size: 0.8rem;
@@ -23,30 +25,3 @@
     margin-top: 0.5rem;
     text-transform: capitalize;
 }
-
-.temperatureVariation {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-    .temperatureVariation > div {
-        line-height: 1;
-    }
-
-    .temperatureVariation > div + div {
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-        margin-left: 2rem;
-        padding-left: 2rem;
-    }
-
-    .temperatureVariationMax {
-        font-weight: 700;
-    }
-
-    .temperatureVariationTitle {
-        font-size: 0.5rem;
-        line-height: 1;
-        margin-bottom: 0.25rem;
-        text-transform: uppercase;
-    }
