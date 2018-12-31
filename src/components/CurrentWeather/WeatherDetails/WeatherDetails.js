@@ -4,6 +4,10 @@ import classes from './WeatherDetails.module.css'
 import WeatherDetailsItem from './WeatherDetailsItem/WeatherDetailsItem'
 
 class weatherDetails extends Component {
+    /**
+     * @description Returns a human readable time format from a timestamp
+     * @param  {string} timestamp
+     */
     getTimeFromTimestamp(timestamp) {
         return moment
             .unix(timestamp)

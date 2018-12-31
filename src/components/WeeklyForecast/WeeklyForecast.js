@@ -1,7 +1,24 @@
-import React from 'react';
+import React from 'react'
+import classes from './WeeklyForecast.module.css'
+import WeeklyForecastListItem from './WeeklyForecastListItem/WeeklyForecastListItem'
+import Loader from '../Loader/Loader'
 
-const weeklyForecast = props => {
-    return <div>Weekly forecast</div>;
-};
+const weeklyForecast = ({ forecast }) => {
+    let component = <Loader isLoading={!forecast} />
 
-export default weeklyForecast;
+    if (forecast) {
+        component = (
+            <>
+                {forecast.map(day => (
+                    <WeeklyForecastListItem key={day.dt} day={day} />
+                ))}
+            </>
+        )
+    }
+
+    return (
+        <div className={`container ${classes.forecastList}`}>{component}</div>
+    )
+}
+
+export default weeklyForecast

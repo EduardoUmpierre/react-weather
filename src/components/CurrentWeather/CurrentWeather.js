@@ -3,8 +3,7 @@ import classes from './CurrentWeather.module.css'
 import WeatherDetails from './WeatherDetails/WeatherDetails'
 import Loader from '../Loader/Loader'
 
-const currentWeather = props => {
-    const weather = props.weather
+const currentWeather = ({ weather }) => {
     let component = <Loader isLoading={!weather} />
 
     if (weather) {

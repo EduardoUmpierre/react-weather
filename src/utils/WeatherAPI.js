@@ -12,4 +12,8 @@ function getCurrentWeather(city) {
     return axios.get(getURL(`/weather?q=${city}`))
 }
 
-export default { getCurrentWeather }
+function getForecast(city) {
+    return axios.get(getURL(`/forecast/daily?q=${city}`))
+}
+
+export default { getCurrentWeather, getForecast }

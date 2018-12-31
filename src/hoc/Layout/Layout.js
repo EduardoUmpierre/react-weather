@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import classes from './Layout.module.css'
 
 const layout = props => {
@@ -10,7 +10,7 @@ const layout = props => {
 
             <main>{props.children}</main>
         </>
-    );
-};
+    )
+}
 
-export default layout;
+export default layout

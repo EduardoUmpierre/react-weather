@@ -1,0 +1,27 @@
+.listItem {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.listItem + .listItem {
+    border-top: 1px solid #3f4663;
+}
+
+.listItem > div {
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.listItem > div:nth-child(2) {
+    text-transform: capitalize;
+}
+
+.listItem > div:nth-child(3),
+.listItem > div:nth-child(4),
+.listItem > div:nth-child(5) {
+    text-align: right;
+}
+
+.listItem > div:nth-child(4) {
+    font-weight: 700;
+}   

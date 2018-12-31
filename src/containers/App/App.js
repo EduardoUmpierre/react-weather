@@ -8,23 +8,26 @@ import WeeklyForecast from '../../components/WeeklyForecast/WeeklyForecast'
 
 class App extends Component {
     state = {
-        city: 'Porto Alegre',
-        weather: null
+        city: 'Porto Alegre, BR',
+        weather: null,
+        weeklyForecast: null
     }
 
     componentDidMount = () => {
         WeatherAPI.getCurrentWeather(this.state.city).then(response => {
-            this.setState(
-                {
-                    weather: this.getWeatherDataFromCurrentWeather(
-                        response.data
-                    )
-                },
-                () => console.log(this.state.weather)
-            )
+            this.setState({
+                weather: this.getWeatherDataFromCurrentWeather(response.data)
+            })
+        })
+
+        WeatherAPI.getForecast(this.state.city).then(response => {
+            this.setState({ weeklyForecast: response.data.list })
         })
     }
-
+    /**
+     * @description Returns the useful data from the API response
+     * @param  {object} data
+     */
     getWeatherDataFromCurrentWeather(data) {
         const additionalData = [...data.weather]
             .map(weather => ({
