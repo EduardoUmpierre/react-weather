@@ -24,6 +24,7 @@ class App extends Component {
             this.setState({ weeklyForecast: response.data.list })
         })
     }
+    
     /**
      * @description Returns the useful data from the API response
      * @param  {object} data
