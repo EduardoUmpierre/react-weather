@@ -12,16 +12,25 @@
     line-height: 1;
 }
 
+.listItem > div:nth-child(3),
+.listItem > div:nth-child(4),
+.listItem > div:nth-child(5) {
+    margin-top: 1rem;
+}
+
 .listItem > div:nth-child(2) {
     text-transform: capitalize;
 }
 
-.listItem > div:nth-child(3),
-.listItem > div:nth-child(4),
-.listItem > div:nth-child(5) {
-    text-align: right;
-}
-
 .listItem > div:nth-child(4) {
     font-weight: 700;
-}   
+}
+
+@media screen and (min-width: 768px) {
+    .listItem > div:nth-child(3),
+    .listItem > div:nth-child(4),
+    .listItem > div:nth-child(5) {
+        margin-top: 0;
+        text-align: right;
+    }
+}

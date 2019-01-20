@@ -1,12 +1,12 @@
-import React from 'react';
-import classes from './Layout.module.css';
-import { DebounceInput } from 'react-debounce-input';
+import React from 'react'
+import classes from './Layout.module.css'
+import { DebounceInput } from 'react-debounce-input'
 
 const layout = props => {
-    let headerClasses = [classes.header];
+    let headerClasses = [classes.header]
 
     if (props.isEditing) {
-        headerClasses.push(classes.isEditing);
+        headerClasses.push(classes.isEditing)
     }
 
     return (
@@ -23,13 +23,13 @@ const layout = props => {
                         }
                     />
 
-                    <button type="submit">OK</button>
+                    <button type='submit'>OK</button>
                 </form>
             </header>
 
             <main>{props.children}</main>
         </>
-    );
-};
+    )
+}
 
-export default layout;
+export default layout
